@@ -1,0 +1,11 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+server:
+  port: 2223
+spring:
+  application:
+    name: producer #当前服务的id
+  zipkin:
+      base-url: http://localhost:8888

@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: config-client
+  boot:
+    admin:
+      client:
+        url: http://localhost:2222
+        password: password
+        username: user
+        instance:
+          prefer-ip: true
+server:
+  port: 7778
+eureka:
+  instance:
+    health-check-url-path: /actuator/health
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #保留所有的端点我们可以看到更多的服务实例相关信息
+  endpoint:
+    health:
+      show-details: always
+

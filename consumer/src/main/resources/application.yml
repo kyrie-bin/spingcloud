@@ -1,0 +1,32 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+server:
+  port: 3333
+spring:
+  application:
+    name: consumer1
+  zipkin:
+    base-url: http://localhost:8888
+#开启熔断器  feign默认实现了熔断器功能，不需要引入额外的包
+feign:
+  hystrix:
+    enabled: true
+#management:
+#  security:
+#    enabled: false
+
+
+
+
+
+
+
+
+
+
+
+
+
+

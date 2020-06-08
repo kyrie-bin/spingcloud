@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    config:
+#      label: master   #分支
+      profile: dev    #指定dev开发环境配置文件, dev开发环境配置文件
+      name: config-client   #指定配置文件名称 config-client,此名字对应git中的配置文件中的名字
+      uri:  http://localhost:5555   #配置服务地址,执行我们上一章的ConfigServer服务地址
+    bus:
+      enabled: true #开启bus
+      trace:
+        enabled: true
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: admin
+    password: admin135
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

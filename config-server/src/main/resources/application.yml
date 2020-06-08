@@ -1,0 +1,23 @@
+server:
+  port: 5555
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/kyrie-bin/config.git
+      label: master
+#spring.cloud.config.server.git.username=
+#spring.cloud.config.server.git.password=spring:
+#spring:
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: classpath:/shared #本地配置文件路径
+#  application:
+#    name: config-server
+#  profiles:
+#    active: native  #指定使用本地配置方式
